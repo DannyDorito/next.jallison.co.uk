@@ -1,4 +1,3 @@
-import { useQuery, useReadQuery } from '@apollo/client';
 import { gql } from '@apollo/client/core';
 
 export const GetGitHubBio = gql`
