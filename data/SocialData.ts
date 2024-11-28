@@ -1,6 +1,5 @@
 import { Github, Instagram, Linkedin, LucideProps, Mail, NotepadText, Youtube } from 'lucide-react';
 import { ForwardRefExoticComponent, RefAttributes } from 'react';
-import { siGithub, siInstagram, siLinkedin, SimpleIcon, siStackoverflow, siYoutube } from 'simple-icons';
 
 export interface SocialData
 {
@@ -47,10 +46,4 @@ export const socialData: SocialData[] = [
     link: 'https://youtube.com/@JohnAllis0n',
     redirect: undefined,
   },
-  // {
-  //   platform: 'Stack Overflow',
-  //   icon: StackOv,
-  //   link: 'https://stackoverflow.com/users/12426156/john-allison',
-  //   redirect: '/StackOverflow'
-  // }
 ];
