@@ -12,8 +12,14 @@ export default function Page() {
           return (
             <>
               {sd.link && (
-                <a key={`social-link-${index}`} className="px-3" href={sd.link} target="_blank" rel="noopener noreferrer">
-                  <sd.icon key={`social-icon-${index}`}/>
+                <a
+                  key={`social-link-${index}`}
+                  className="px-3"
+                  href={sd.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <sd.icon key={`social-icon-${index}`} />
                 </a>
               )}
             </>
