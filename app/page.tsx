@@ -10,7 +10,7 @@ export default function Page() {
       <div className="flex flex-row pt-10">
         {socialData.map((sd, index) => {
           return (
-            <>
+            <div key={`social-div-${index}`}>
               {sd.link && (
                 <a
                   key={`social-link-${index}`}
@@ -22,7 +22,7 @@ export default function Page() {
                   <sd.icon key={`social-icon-${index}`} />
                 </a>
               )}
-            </>
+            </div>
           );
         })}
       </div>
