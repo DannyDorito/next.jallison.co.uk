@@ -15,6 +15,11 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { Toaster } from "@/components/ui/sonner";
+import { toast } from "sonner";
+import { Turnstile } from "next-turnstile";
+import { useState } from "react";
+import { Send } from "lucide-react";
 
 export const FormSchema = z.object({
   name: z.string().min(1, {
@@ -32,6 +37,7 @@ export const FormSchema = z.object({
 });
 
 export const Contact = () => {
+  const [turnstileVerified, setTurnstileVerified] = useState<boolean>(false);
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
@@ -41,7 +47,34 @@ export const Contact = () => {
     },
   });
 
-  const onSubmit = (data: z.infer<typeof FormSchema>) => {};
+  const onSubmit = async (data: z.infer<typeof FormSchema>) => {
+    if (!turnstileVerified) {
+      toast("Please complete the captcha!");
+      return;
+    }
+    const postData = {
+      ...data,
+      access_key: process.env.NEXT_PUBLIC_FORM_API_KEY,
+    };
+
+    await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(postData, null, 2),
+    }).then(async (response) => {
+      const json = await response.json();
+      if (json.success) {
+        toast("Message sent to me!");
+        form.reset();
+      } else {
+        toast("An Error Occurred!");
+        console.error(json.message());
+      }
+    });
+  };
 
   return (
     <main
@@ -51,6 +84,7 @@ export const Contact = () => {
       <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
         {`<Contact/>`}
       </h1>
+      <Toaster />
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)}>
           <div className="flex flex-row">
@@ -101,7 +135,19 @@ export const Contact = () => {
             />
           </div>
           <div className="flex justify-center m-2.5">
-            <Button type="submit">Submit</Button>
+            <Button type="submit">
+              <Send className="mr-3" />
+              Submit
+            </Button>
+          </div>
+          <div className="flex justify-center m-2.5">
+            <Turnstile
+              siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || ""}
+              onVerify={() => setTurnstileVerified(true)}
+              onError={() => setTurnstileVerified(false)}
+              onExpire={() => setTurnstileVerified(false)}
+              theme={"dark"}
+            />
           </div>
         </form>
       </Form>

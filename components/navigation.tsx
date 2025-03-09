@@ -11,7 +11,7 @@ import Link from "next/link";
 
 export const Navigation = () => {
   return (
-    <NavigationMenu className="right sticky top-0 z-50">
+    <NavigationMenu className="sticky ml-auto top-0 z-50" id="home">
       <NavigationMenuList>
         <NavigationMenuItem>
           <Link href="#home">
