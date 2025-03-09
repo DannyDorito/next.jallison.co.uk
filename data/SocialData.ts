@@ -1,4 +1,4 @@
-import { Github, Instagram, Linkedin, LucideProps, Mail, NotepadText, Youtube } from 'lucide-react';
+import { Github, Linkedin, LucideProps, Mail, NotepadText, } from 'lucide-react';
 import { ForwardRefExoticComponent, RefAttributes } from 'react';
 
 export interface SocialData
@@ -23,12 +23,6 @@ export const socialData: SocialData[] = [
     redirect: '/github',
   },
   {
-    platform: 'Instagram',
-    icon: Instagram,
-    link: 'https://www.instagram.com/johnallis0n',
-    redirect: undefined,
-  },
-  {
     platform: 'Resume',
     icon: NotepadText,
     link: 'https://docs.google.com/document/d/1zsnem12ZA2wqAPCwe3Y6CJdBgpnC0SpeCacsQYMILMQ/edit?usp=sharing',
@@ -39,11 +33,5 @@ export const socialData: SocialData[] = [
     icon: Linkedin,
     link: 'https://www.linkedin.com/in/johnallison-',
     redirect: undefined,
-  },
-  {
-    platform: 'YouTube',
-    icon: Youtube,
-    link: 'https://youtube.com/@JohnAllis0n',
-    redirect: undefined,
-  },
+  }
 ];
