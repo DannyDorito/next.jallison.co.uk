@@ -25,17 +25,17 @@ export const About = () => {
       className="flex min-h-fit flex-col items-center p-24 overflow-hidden"
     >
       <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
-        &lt;About&#47;gt;
+        &lt;About&#47;&gt;
       </h1>
       <Card className="max-w-1/2">
         <CardHeader>
-          <CardTitle>Hi, I'm John.</CardTitle>
+          <CardTitle>Hi, I&apos;m John.</CardTitle>
           <CardDescription>
             MEng (Hons). MBCS. Software Developer.
           </CardDescription>
         </CardHeader>
         <CardContent>
-          I'm currently a Mid-Level Full Stack Developer at{" "}
+          I&apos;m currently a Mid-Level Full Stack Developer at{" "}
           <Link
             href="https://trailight.com"
             hrefLang="en-gb"
@@ -46,7 +46,7 @@ export const About = () => {
           .
           <br />
           After graduating with a 1st level Masters Degree in Computer Science
-          (Software Engineering) I didn't stop there.
+          (Software Engineering) I didn&apos;t stop there.
           <br />I continued to enhance my skillset with new and exiting
           technologies, such as:
         </CardContent>
