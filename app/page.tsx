@@ -10,12 +10,12 @@ import { Skills } from "@/components/skills";
 export default function Page() {
   return (
     <>
-      {/* <Navigation /> */}
+      <Navigation />
       <Home />
-      {/* <About />
+      <About />
       <Skills />
       <Projects />
-      <Contact /> */}
+      <Contact />
     </>
   );
 }
