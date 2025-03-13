@@ -7,7 +7,7 @@ import Link from "next/link";
 export const Home = () => {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center p-24 overflow-hidden">
-      <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
+      <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl pb-3">
         {"<John Allison/>"}
       </h1>
       <p className="text-sm text-muted-foreground">Full Stack Developer.</p>
@@ -16,17 +16,21 @@ export const Home = () => {
           return (
             <div key={`social-div-${index}`} className="pr-2 pl-2">
               {sd.link && (
-                <Button variant="secondary" size="icon">
-                  <Link
-                    key={`social-link-${index}`}
-                    className="px-3"
-                    href={sd.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                <Link
+                  key={`social-link-${index}`}
+                  className="px-3"
+                  href={sd.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button
+                    variant="secondary"
+                    size="icon"
+                    className="cursor-pointer"
                   >
                     <sd.icon key={`social-icon-${index}`} />
-                  </Link>
-                </Button>
+                  </Button>
+                </Link>
               )}
             </div>
           );

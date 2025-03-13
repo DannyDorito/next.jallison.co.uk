@@ -1,4 +1,5 @@
-export interface Skills {
+export interface Skills
+{
   name: string;
   proficiency: number;
 }

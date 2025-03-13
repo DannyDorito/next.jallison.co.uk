@@ -28,13 +28,6 @@ export const Navigation = () => {
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="#skills">
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Skills
-            </NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
           <Link href="#projects">
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Projects

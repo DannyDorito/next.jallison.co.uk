@@ -81,7 +81,7 @@ export const Contact = () => {
       id="contact"
       className="flex min-h-fit flex-col items-center p-24 overflow-hidden"
     >
-      <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
+      <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl pb-3">
         &lt;Contact&#47;&gt;
       </h1>
       <Toaster />
@@ -135,7 +135,7 @@ export const Contact = () => {
             />
           </div>
           <div className="flex justify-center m-2.5">
-            <Button type="submit">
+            <Button type="submit" className="cursor-pointer">
               <Send className="mr-3" />
               Submit
             </Button>

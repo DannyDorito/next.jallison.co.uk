@@ -24,7 +24,7 @@ export const About = () => {
       id="about"
       className="flex min-h-fit flex-col items-center p-24 overflow-hidden"
     >
-      <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
+      <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl pb-3">
         &lt;About&#47;&gt;
       </h1>
       <Card className="max-w-1/2">
@@ -81,17 +81,17 @@ export const About = () => {
         </CardContent>
         <CardFooter className="items-center flex flex-col">
           <div>
-            <Button>
-              <Link
-                href="https://docs.google.com/document/d/1zsnem12ZA2wqAPCwe3Y6CJdBgpnC0SpeCacsQYMILMQ"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex flex-row"
-              >
+            <Link
+              href="https://docs.google.com/document/d/e/2PACX-1vS7h0KrhJ_wAuKT9QapLCwYker1CWi8F5anmOtSm7RDNJSaGHPAi0Cp_NqKV7AYvjopKeX90Ex1Mg-H/pub"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-row"
+            >
+              <Button className="cursor-pointer">
                 <FileText className="mr-3" />
                 CV
-              </Link>
-            </Button>
+              </Button>
+            </Link>
           </div>
         </CardFooter>
       </Card>
