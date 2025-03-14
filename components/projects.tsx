@@ -18,11 +18,26 @@ import {
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
-import { shuffle } from "@/lib/utils";
 import Image from "next/image";
 
 export const Projects = () => {
   const [shuffledProjects, setShuffledProjects] = useState<Project[]>([]);
+
+  const shuffle = (array: Project[]) => {
+    let currentIndex = array.length;
+
+    while (currentIndex != 0) {
+      const randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+
+      [array[currentIndex], array[randomIndex]] = [
+        array[randomIndex],
+        array[currentIndex],
+      ];
+    }
+
+    return array;
+  };
 
   useEffect(() => {
     const shuffled = shuffle(projects);
