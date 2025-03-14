@@ -6,8 +6,8 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
-  title: "next.jallison.co.uk",
-  description: "next.jallison.co.uk",
+  title: "John Allison's Portfolio",
+  description: "MEng (Hons). MBCS. Software Developer.",
 };
 
 export const dynamic = "force-static";
