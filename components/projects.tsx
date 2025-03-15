@@ -5,6 +5,7 @@ import {
   Card,
   CardContent,
   CardDescription,
+  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
@@ -16,9 +17,10 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import { Button } from "./ui/button";
+import { LinkIcon } from "lucide-react";
 
 export const Projects = () => {
   const [shuffledProjects, setShuffledProjects] = useState<Project[]>([]);
@@ -66,43 +68,49 @@ export const Projects = () => {
           <CarouselContent>
             {shuffledProjects.map((project, index) => (
               <CarouselItem key={index}>
-                <div className="p-1">
-                  <Card key={index}>
-                    <CardHeader>
-                      <CardTitle>{project.name}</CardTitle>
-                      <CardDescription>{project.description}</CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                      <Image
-                        src={project.image}
-                        alt={project.name}
-                        sizes="100vw"
-                        style={{
-                          width: '100%',
-                          height: 'auto',
-                        }}
-                        placeholder="blur"
-                        priority={true}
-                        className="pb-3"
-                      />
-                      <div className="flex justify-center pb-3">
-                        <Link
-                          key={`project-link-${index}`}
-                          href={project.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <Button
-                            variant="secondary"
-                            className="cursor-pointer"
-                          >
-                            View {project.buttonText}
-                          </Button>
-                        </Link>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </div>
+                <Card key={index}>
+                  <CardHeader>
+                    <CardTitle>
+                      <Link
+                        key={`project-link-${index}`}
+                        href={project.url}
+                        target="_blank"
+                        hrefLang="en-gb"
+                        rel="noopener noreferrer"
+                        className="underline flex items-center"
+                      >
+                        <LinkIcon size={16} />
+                        {project.name}
+                      </Link>
+                    </CardTitle>
+                    <CardDescription>{project.description}</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <Image
+                      src={project.image}
+                      alt={project.name}
+                      sizes="100vw"
+                      style={{
+                        width: "100%",
+                        height: "auto",
+                      }}
+                      placeholder="blur"
+                      priority={true}
+                    />
+                  </CardContent>
+                  <CardFooter className="items-center flex flex-col">
+                    <Link
+                      key={`project-link-${index}`}
+                      href={project.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Button variant="secondary" className="cursor-pointer">
+                        View All Projects
+                      </Button>
+                    </Link>
+                  </CardFooter>
+                </Card>
               </CarouselItem>
             ))}
           </CarouselContent>

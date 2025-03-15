@@ -135,12 +135,6 @@ export const Contact = () => {
             />
           </div>
           <div className="flex justify-center m-2.5">
-            <Button type="submit" className="cursor-pointer">
-              <Send className="mr-3" />
-              Submit
-            </Button>
-          </div>
-          <div className="flex justify-center m-2.5">
             <Turnstile
               siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || ""}
               onVerify={() => setTurnstileVerified(true)}
@@ -148,6 +142,12 @@ export const Contact = () => {
               onExpire={() => setTurnstileVerified(false)}
               theme={"dark"}
             />
+          </div>
+          <div className="flex justify-center m-2.5">
+            <Button type="submit" className="cursor-pointer">
+              <Send className="mr-3" />
+              Submit
+            </Button>
           </div>
         </form>
       </Form>

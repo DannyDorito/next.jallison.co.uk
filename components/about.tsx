@@ -16,7 +16,7 @@ import {
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { FileText } from "lucide-react";
+import { FileText, LinkIcon } from "lucide-react";
 
 export const About = () => {
   return (
@@ -35,10 +35,12 @@ export const About = () => {
           </CardDescription>
         </CardHeader>
         <CardContent>
-          I&apos;m currently a Mid-Level Full Stack Developer at{" "}
+          I&apos;m currently a Mid-Level Full Stack Developer at&nbsp;
           <Link
             href="https://trailight.com"
+            target="_blank"
             hrefLang="en-gb"
+            rel="noopener noreferrer"
             className="underline"
           >
             Trailight
@@ -80,19 +82,17 @@ export const About = () => {
           free to download my CV below!
         </CardContent>
         <CardFooter className="items-center flex flex-col">
-          <div>
-            <Link
-              href="https://docs.google.com/document/d/e/2PACX-1vS7h0KrhJ_wAuKT9QapLCwYker1CWi8F5anmOtSm7RDNJSaGHPAi0Cp_NqKV7AYvjopKeX90Ex1Mg-H/pub"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex flex-row"
-            >
-              <Button className="cursor-pointer">
-                <FileText className="mr-3" />
-                CV
-              </Button>
-            </Link>
-          </div>
+          <Link
+            href="https://docs.google.com/document/d/e/2PACX-1vS7h0KrhJ_wAuKT9QapLCwYker1CWi8F5anmOtSm7RDNJSaGHPAi0Cp_NqKV7AYvjopKeX90Ex1Mg-H/pub"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-row"
+          >
+            <Button className="cursor-pointer">
+              <FileText className="mr-3" />
+              Resume
+            </Button>
+          </Link>
         </CardFooter>
       </Card>
     </main>
