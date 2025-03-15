@@ -1,3 +1,4 @@
+import { Copyright } from "lucide-react";
 import Link from "next/link";
 
 export const Footer = () => {
@@ -47,8 +48,9 @@ export const Footer = () => {
           </Link>
           .
         </p>
-        <p className="leading-7 [&:not(:first-child)]:mt-6">
-          &#169; John Allison 2018 - {new Date().getFullYear()}.
+        <p className="leading-7 [&:not(:first-child)]:mt-6 flex items-center">
+          <Copyright size={16} />
+          &nbsp;John Allison 2018 - {new Date().getFullYear()}.
         </p>
       </main>
     </>
