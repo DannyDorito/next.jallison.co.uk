@@ -78,6 +78,7 @@ export const Projects = () => {
                         hrefLang="en-gb"
                         rel="noopener noreferrer"
                         className="underline flex items-center"
+                        aria-label={project.name}
                       >
                         <LinkIcon size={16} />
                         {project.name}
@@ -104,6 +105,7 @@ export const Projects = () => {
                       href="https://github.com/DannyDorito"
                       target="_blank"
                       rel="noopener noreferrer"
+                      aria-label='GitHub'
                     >
                       <Button variant="secondary" className="cursor-pointer">
                         View All Projects

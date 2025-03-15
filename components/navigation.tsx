@@ -14,28 +14,28 @@ export const Navigation = () => {
     <NavigationMenu className="sticky ml-auto top-0 z-50" id="home">
       <NavigationMenuList>
         <NavigationMenuItem>
-          <Link href="#home" legacyBehavior passHref prefetch={false}>
+          <Link href="#home" legacyBehavior passHref prefetch={false} aria-label="Home">
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Home
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="#about" legacyBehavior passHref prefetch={false}>
+          <Link href="#about" legacyBehavior passHref prefetch={false} aria-label="About">
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               About
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="#projects" legacyBehavior passHref prefetch={false}>
+          <Link href="#projects" legacyBehavior passHref prefetch={false} aria-label="Projects">
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Projects
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="#contact" legacyBehavior passHref prefetch={false}>
+          <Link href="#contact" legacyBehavior passHref prefetch={false} aria-label="Contact">
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Contact
             </NavigationMenuLink>

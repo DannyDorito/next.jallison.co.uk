@@ -15,23 +15,22 @@ export const Home = () => {
         {socialData.map((sd, index) => {
           return (
             <div key={`social-div-${index}`} className="pr-2 pl-2">
-              {sd.link && (
-                <Link
-                  key={`social-link-${index}`}
-                  className="px-3"
-                  href={sd.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
+              <Link
+                key={`social-link-${index}`}
+                className="px-3"
+                href={sd.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={sd.platform}
+              >
+                <Button
+                  variant="secondary"
+                  size="icon"
+                  className="cursor-pointer"
                 >
-                  <Button
-                    variant="secondary"
-                    size="icon"
-                    className="cursor-pointer"
-                  >
-                    <sd.icon key={`social-icon-${index}`} />
-                  </Button>
-                </Link>
-              )}
+                  <sd.icon key={`social-icon-${index}`} />
+                </Button>
+              </Link>
             </div>
           );
         })}

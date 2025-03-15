@@ -42,6 +42,7 @@ export const About = () => {
             hrefLang="en-gb"
             rel="noopener noreferrer"
             className="underline"
+            aria-label="Trailight"
           >
             Trailight
           </Link>

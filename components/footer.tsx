@@ -13,6 +13,7 @@ export const Footer = () => {
             hrefLang="en-gb"
             rel="noopener noreferrer"
             className="underline"
+            aria-label="VS Code"
           >
             VS Code
           </Link>
@@ -23,6 +24,7 @@ export const Footer = () => {
             hrefLang="en-gb"
             rel="noopener noreferrer"
             className="underline"
+            aria-label="Next.js"
           >
             Next.js
           </Link>
@@ -33,6 +35,7 @@ export const Footer = () => {
             hrefLang="en-gb"
             rel="noopener noreferrer"
             className="underline"
+            aria-label="shadcn UI"
           >
             shadcn/ui
           </Link>
@@ -43,6 +46,7 @@ export const Footer = () => {
             hrefLang="en-gb"
             rel="noopener noreferrer"
             className="underline"
+            aria-label="Cloudflare"
           >
             Cloudflare
           </Link>
@@ -54,6 +58,7 @@ export const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="flex flex-row"
+            aria-label="Licence"
           >
             <Copyright size={16} />
           </Link>
