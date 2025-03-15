@@ -49,7 +49,14 @@ export const Footer = () => {
           .
         </p>
         <p className="leading-7 [&:not(:first-child)]:mt-6 flex items-center">
-          <Copyright size={16} />
+          <Link
+            href="https://github.com/DannyDorito/next.jallison.co.uk?tab=Unlicense-1-ov-file#readme"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-row"
+          >
+            <Copyright size={16} />
+          </Link>
           &nbsp;John Allison 2018 - {new Date().getFullYear()}.
         </p>
       </main>
