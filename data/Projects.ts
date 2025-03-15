@@ -1,10 +1,12 @@
 import { StaticImageData } from 'next/image';
-import csg from '../images/csg.png'
-import notesApp from '../images/notes-app.png'
-import nppSqf from '../images/npp-sqf.png'
-import knockout from '../images/knockout.png'
-import reforger from '../images/reforger.png'
-import portfolio from '../images/portfolio.png'
+import csg from '../public/images/csg.png'
+import notesApp from '../public/images/notes-app.png'
+import nppSqf from '../public/images/npp-sqf.png'
+import knockout from '../public/images/knockout.png'
+import reforger from '../public/images/reforger.png'
+import portfolio from '../public/images/portfolio.png'
+import dayz from '../public/images/dayz.png'
+import bundler from '../public/images/bundler.png'
 
 export interface Project
 {
@@ -58,5 +60,20 @@ export const projects: Project[] = [
     url: 'https://github.com/DannyDorito/chromeextensions-knockoutjs',
     buttonText: 'Repo',
     image: knockout
+  },
+  {
+    name: 'DayZ Startup Script',
+    description: 'The best script for creating a DayZ server, a .bat file for all your DayZ Server startup needs!',
+    url: 'https://github.com/DannyDorito/DayZ-Startup-and-Restart-Script',
+    buttonText: 'Repo',
+    image: dayz
+  }
+  ,
+  {
+    name: 'Bundle ARMA Commands',
+    description: 'Small Web Scraper to help find new ARMA scripting commands from various Wikis.',
+    url: 'https://github.com/DannyDorito/BundleARMACommands',
+    buttonText: 'Repo',
+    image: bundler
   }
 ]

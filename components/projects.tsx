@@ -55,7 +55,7 @@ export const Projects = () => {
       <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight pb-3">
         Here are some of my personal projects.
       </h2>
-      <div>
+      <div className="w-full flex justify-center">
         <Carousel
           className="w-full max-w-xl"
           opts={{
@@ -76,7 +76,13 @@ export const Projects = () => {
                       <Image
                         src={project.image}
                         alt={project.name}
-                        width="500"
+                        sizes="100vw"
+                        style={{
+                          width: '100%',
+                          height: 'auto',
+                        }}
+                        placeholder="blur"
+                        priority={true}
                         className="pb-3"
                       />
                       <div className="flex justify-center pb-3">

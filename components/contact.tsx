@@ -67,7 +67,7 @@ export const Contact = () => {
     }).then(async (response) => {
       const json = await response.json();
       if (json.success) {
-        toast("Message sent to me!");
+        toast("Message sent to me! <3");
         form.reset();
       } else {
         toast("An Error Occurred!");
