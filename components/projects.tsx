@@ -100,8 +100,8 @@ export const Projects = () => {
                   </CardContent>
                   <CardFooter className="items-center flex flex-col">
                     <Link
-                      key={`project-link-${index}`}
-                      href={project.url}
+                      key={`project-link-${index}-all`}
+                      href="https://github.com/DannyDorito"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
