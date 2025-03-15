@@ -16,7 +16,7 @@ import {
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { FileText, LinkIcon } from "lucide-react";
+import { FileText } from "lucide-react";
 
 export const About = () => {
   return (
