@@ -87,10 +87,6 @@ export const Contact = () => {
     });
   };
 
-  const showTurnstile = () => {
-    return;
-  };
-
   return (
     <main
       id="contact"
