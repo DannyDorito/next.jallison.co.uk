@@ -17,9 +17,18 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Toaster } from "@/components/ui/sonner";
 import { toast } from "sonner";
-import { Turnstile } from "next-turnstile";
 import { useState } from "react";
 import { Send } from "lucide-react";
+import dynamic from "next/dynamic";
+import { Spinner } from "./ui/spinner";
+
+const Turnstile = dynamic(
+  () => import("next-turnstile").then((d) => d.Turnstile),
+  {
+    ssr: false,
+    loading: () => <div className="flex justify-center m-2.5 h-15"><Spinner size='medium'>Loading CAPTCHA...</Spinner></div>,
+  }
+);
 
 export const FormSchema = z.object({
   name: z.string().min(1, {
@@ -37,9 +46,11 @@ export const FormSchema = z.object({
 });
 
 export const Contact = () => {
+  const [isFormDirty, setIsFormDirty] = useState<boolean>(false);
   const [turnstileVerified, setTurnstileVerified] = useState<boolean>(false);
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
+    mode: "onSubmit",
     defaultValues: {
       name: "",
       email: "",
@@ -76,6 +87,10 @@ export const Contact = () => {
     });
   };
 
+  const showTurnstile = () => {
+    return;
+  };
+
   return (
     <main
       id="contact"
@@ -86,7 +101,10 @@ export const Contact = () => {
       </h1>
       <Toaster />
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)}>
+        <form
+          onSubmit={form.handleSubmit(onSubmit)}
+          onChange={() => setIsFormDirty(true)}
+        >
           <div className="flex flex-row">
             <div className="m-2.5">
               <FormField
@@ -134,15 +152,17 @@ export const Contact = () => {
               )}
             />
           </div>
-          <div className="flex justify-center m-2.5">
-            <Turnstile
-              siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || ""}
-              onVerify={() => setTurnstileVerified(true)}
-              onError={() => setTurnstileVerified(false)}
-              onExpire={() => setTurnstileVerified(false)}
-              theme={"dark"}
-            />
-          </div>
+          {isFormDirty && (
+            <div className="flex justify-center m-2.5 h-15">
+              <Turnstile
+                siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || ""}
+                onVerify={() => setTurnstileVerified(true)}
+                onError={() => setTurnstileVerified(false)}
+                onExpire={() => setTurnstileVerified(false)}
+                theme={"dark"}
+              />
+            </div>
+          )}
           <div className="flex justify-center m-2.5">
             <Button type="submit" className="cursor-pointer">
               <Send className="mr-3" />
