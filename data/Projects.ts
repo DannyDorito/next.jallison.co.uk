@@ -7,6 +7,7 @@ import reforger from '../public/images/reforger.png'
 import portfolio from '../public/images/portfolio.png'
 import dayz from '../public/images/dayz.png'
 import bundler from '../public/images/bundler.png'
+import baro from '../public/images/baro.png'
 
 export interface Project
 {
@@ -59,12 +60,18 @@ export const projects: Project[] = [
     description: 'The best script for creating a DayZ server, a .bat file for all your DayZ Server startup needs!',
     url: 'https://github.com/DannyDorito/DayZ-Startup-and-Restart-Script',
     image: dayz
-  }
-  ,
+  },
   {
     name: 'Bundle ARMA Commands',
     description: 'Small Web Scraper to help find new ARMA scripting commands from various Wikis.',
     url: 'https://github.com/DannyDorito/BundleARMACommands',
     image: bundler
+  }
+  ,
+  {
+    name: `Baro Ki'teer Shopping List`,
+    description: `A simple shopping list for Baro Ki'teer, the Void Trader in Warframe.`,
+    url: 'https://github.com/DannyDorito/BundleARMACommands',
+    image: baro
   }
 ]
