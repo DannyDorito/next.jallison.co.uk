@@ -71,7 +71,7 @@ export const projects: Project[] = [
   {
     name: `Baro Ki'teer Shopping List`,
     description: `A simple shopping list for Baro Ki'teer, the Void Trader in Warframe.`,
-    url: 'https://github.com/DannyDorito/BundleARMACommands',
+    url: 'https://voidtrader.observer',
     image: baro
   }
 ]
