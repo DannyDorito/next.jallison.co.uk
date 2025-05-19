@@ -84,7 +84,7 @@ export const About = () => {
         </CardContent>
         <CardFooter className="items-center flex flex-col">
           <Link
-            href="https://docs.google.com/document/d/e/2PACX-1vS7h0KrhJ_wAuKT9QapLCwYker1CWi8F5anmOtSm7RDNJSaGHPAi0Cp_NqKV7AYvjopKeX90Ex1Mg-H/pub"
+            href="https://drive.google.com/file/d/1Pk37h2Ml5kH9gdqUWx_ls3mz3rcqQJj9/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="flex flex-row"
