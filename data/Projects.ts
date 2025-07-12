@@ -8,6 +8,7 @@ import portfolio from '../public/images/portfolio.png'
 import dayz from '../public/images/dayz.png'
 import bundler from '../public/images/bundler.png'
 import baro from '../public/images/baro.png'
+import whenbaro from '../public/images/whenbaro.png'
 
 export interface Project
 {
@@ -73,5 +74,11 @@ export const projects: Project[] = [
     description: `A simple shopping list for Baro Ki'teer, the Void Trader in Warframe.`,
     url: 'https://voidtrader.observer',
     image: baro
+  },
+  {
+    name: 'Baro Ki\'teer Messenger App',
+    description: 'A KIM inspired Windows 95 style messenger app for when Baro Ki\'teer is in town.',
+    url: 'https://whenbaro.jallison.co.uk',
+    image: whenbaro
   }
 ]
