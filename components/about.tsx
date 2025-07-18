@@ -56,22 +56,22 @@ export const About = () => {
         <CardContent>
           <div className="flex flex-row">
             <div>
-              {programmingLanguages.map((language, index) => (
-                <Badge className="mr-1" key={`pl-${index}`}>
+              {programmingLanguages.map((language) => (
+                <Badge className="mr-1" key={`pl-${language.name}`}>
                   {language.name}
                 </Badge>
               ))}
             </div>
             <div>
-              {javascriptFrameworks.map((language, index) => (
-                <Badge className="mr-1" key={`js-${index}`}>
+              {javascriptFrameworks.map((language) => (
+                <Badge className="mr-1" key={`js-${language.name}`}>
                   {language.name}
                 </Badge>
               ))}
             </div>
             <div>
-              {devops.map((devops, index) => (
-                <Badge className="mr-1" key={`do-${index}`}>
+              {devops.map((devops) => (
+                <Badge className="mr-1" key={`do-${devops.name}`}>
                   {devops.name}
                 </Badge>
               ))}

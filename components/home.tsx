@@ -12,11 +12,11 @@ export const Home = () => {
       </h1>
       <p className="text-sm text-muted-foreground">Full Stack Developer.</p>
       <div className="flex flex-row pt-10">
-        {socialData.map((sd, index) => {
+        {socialData.map((sd) => {
           return (
-            <div key={`social-div-${index}`} className="pr-2 pl-2">
+            <div key={`social-div-${sd.platform}`} className="pr-2 pl-2">
               <Link
-                key={`social-link-${index}`}
+                key={`social-link-${sd.platform}`}
                 className="px-3"
                 href={sd.link}
                 target="_blank"
@@ -28,7 +28,7 @@ export const Home = () => {
                   size="icon"
                   className="cursor-pointer"
                 >
-                  <sd.icon key={`social-icon-${index}`} />
+                  <sd.icon key={`social-icon-${sd.platform}`} />
                 </Button>
               </Link>
             </div>

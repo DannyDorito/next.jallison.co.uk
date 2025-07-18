@@ -12,5 +12,9 @@
     "UAT",
     "WFH",
     "whenbaro"
-  ]
+  ],
+  "sonarlint.connectedMode.project": {
+    "connectionId": "dannydorito",
+    "projectKey": "DannyDorito_next.jallison.co.uk"
+  }
 }

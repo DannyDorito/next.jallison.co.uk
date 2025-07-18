@@ -66,13 +66,13 @@ export const Projects = () => {
           }}
         >
           <CarouselContent>
-            {shuffledProjects.map((project, index) => (
-              <CarouselItem key={index}>
-                <Card key={index}>
+            {shuffledProjects.map((project) => (
+              <CarouselItem key={project.url}>
+                <Card key={project.url}>
                   <CardHeader>
                     <CardTitle>
                       <Link
-                        key={`project-link-${index}`}
+                        key={`project-link-${project.url}`}
                         href={project.url}
                         target="_blank"
                         hrefLang="en-gb"
@@ -101,7 +101,7 @@ export const Projects = () => {
                   </CardContent>
                   <CardFooter className="items-center flex flex-col">
                     <Link
-                      key={`project-link-${index}-all`}
+                      key={`project-link-${project.url}-all`}
                       href="https://github.com/DannyDorito"
                       target="_blank"
                       rel="noopener noreferrer"
