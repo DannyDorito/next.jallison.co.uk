@@ -1,4 +1,4 @@
-import { Github, Linkedin, LucideProps, Mail, NotepadText, } from 'lucide-react';
+import { GitFork, LucideProps, Mail, NotepadText, Users, } from 'lucide-react';
 import { ForwardRefExoticComponent, RefAttributes } from 'react';
 
 export interface SocialData
@@ -16,7 +16,7 @@ export const socialData: SocialData[] = [
   },
   {
     platform: 'GitHub',
-    icon: Github,
+    icon: GitFork,
     link: 'https://github.com/DannyDorito',
   },
   {
@@ -26,7 +26,7 @@ export const socialData: SocialData[] = [
   },
   {
     platform: 'LinkedIn',
-    icon: Linkedin,
+    icon: Users,
     link: 'https://www.linkedin.com/in/johnallison-',
   }
 ];
