@@ -3,8 +3,16 @@ import type { NextConfig } from 'next';
 const nextConfig: NextConfig = {
   output: 'export',
   reactStrictMode: true,
-  productionBrowserSourceMaps: true,
-  images: { unoptimized: true }
-}
+  productionBrowserSourceMaps: false,
+  poweredByHeader: false,
+  images: { unoptimized: true },
 
-export default nextConfig
+  experimental: {
+    optimizePackageImports: [ 'lucide-react' ],
+  },
+  turbopack: {
+    root: __dirname,
+  },
+};
+
+export default nextConfig;

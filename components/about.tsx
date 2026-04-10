@@ -37,14 +37,14 @@ export const About = () => {
         <CardContent>
           I&apos;m currently a Mid-Level Full Stack Developer at&nbsp;
           <Link
-            href="https://trailight.com"
+            href="https://comply.com"
             target="_blank"
             hrefLang="en-gb"
             rel="noopener noreferrer"
             className="underline"
-            aria-label="Trailight"
+            aria-label="Comply"
           >
-            Trailight
+            Comply
           </Link>
           .
           <br />
