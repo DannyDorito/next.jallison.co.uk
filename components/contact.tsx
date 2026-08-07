@@ -26,7 +26,7 @@ const Turnstile = dynamic(
   () => import("next-turnstile").then((d) => d.Turnstile),
   {
     ssr: false,
-    loading: () => <div className="flex justify-center m-2.5 h-15"><Spinner size='medium'>Loading CAPTCHA...</Spinner></div>,
+    loading: () => <div className="flex justify-center m-2.5 h-15"><Spinner className="size-4">Loading CAPTCHA...</Spinner></div>,
   }
 );
 
